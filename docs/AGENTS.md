@@ -132,3 +132,11 @@ Before implementing a major feature:
 - Use Graphify when the project has enough implementation to benefit from an updated codebase map.
 - Do not spend excessive tokens repeatedly loading skill documentation or generating project maps.
 - If a relevant skill is unavailable, continue using sound engineering practices and inform the user only when its absence materially affects the task.
+
+## Git Workflow
+
+- NEVER commit or push directly to `main`.
+- Work on the persistent Codex branch for the active development stream, using the `codex/` prefix (for example, `codex/ui-foundation-skeleton`).
+- Commit your changes in logical units with clear commit messages.
+- Push the branch to origin (`git push -u origin HEAD`).
+- Open a Pull Request against `main` when a feature slice is ready or when requested; a PR is not required for every small progress commit.
