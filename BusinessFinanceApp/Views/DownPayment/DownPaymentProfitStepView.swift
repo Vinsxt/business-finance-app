@@ -9,7 +9,7 @@ struct DownPaymentProfitStepView: View {
             SectionHeading("3. Add to monthly profit", subtitle: "Record the sale now, but keep profit recognition pending settlement.")
 
             VStack(alignment: .leading, spacing: 12) {
-                LabeledContent("Status", value: "Belum Lunas")
+                LabeledContent("Status", value: "Unpaid")
                 LabeledContent("Date Purchase", value: vehicle.purchaseDate.formatted(date: .abbreviated, time: .omitted))
                 LabeledContent("Date Sold", value: draft.transactionDate.formatted(date: .abbreviated, time: .omitted))
                 LabeledContent("Type", value: vehicle.type)

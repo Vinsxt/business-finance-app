@@ -12,8 +12,8 @@ enum DownPaymentStep: Int, CaseIterable, Identifiable {
     var title: String {
         switch self {
         case .transaction: "TRX"
-        case .pendingFunds: "Dana Pending"
-        case .monthlyProfit: "Profit Bulanan"
+        case .pendingFunds: "Pending Funds"
+        case .monthlyProfit: "Monthly Profit"
         case .stock: "Stock"
         case .reconciliation: "Limit Checker"
         }
@@ -21,7 +21,7 @@ enum DownPaymentStep: Int, CaseIterable, Identifiable {
 
     var detail: String {
         switch self {
-        case .transaction: "Record the incoming DP"
+        case .transaction: "Record the incoming down payment"
         case .pendingFunds: "Move the vehicle and calculate the balance"
         case .monthlyProfit: "Mark the unit sold but unpaid"
         case .stock: "Remove it from active inventory"

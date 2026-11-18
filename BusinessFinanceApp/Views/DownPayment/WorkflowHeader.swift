@@ -8,9 +8,9 @@ struct WorkflowHeader: View {
             Label("Guided finance workflow", systemImage: "checklist")
                 .font(.subheadline.weight(.medium))
                 .foregroundStyle(FinanceDesign.accent)
-            Text("New down payment")
+            Text("New down payment transaction")
                 .font(.largeTitle.weight(.bold))
-            Text("Complete the related book updates in one controlled sequence for (partner.name).")
+            Text("Complete the related book updates in one controlled sequence for \(partner.name).")
                 .foregroundStyle(.secondary)
         }
     }

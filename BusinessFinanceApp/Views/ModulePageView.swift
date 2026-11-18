@@ -14,7 +14,7 @@ struct ModulePageView: View {
                 } description: {
                     Text("This page is ready for its data source and workflow actions.")
                 } actions: {
-                    Text("The next slice will connect (route.title.lowercased()) to Supabase.")
+                    Text("The next slice will connect \(route.title.lowercased()) to Supabase.")
                         .font(.footnote)
                         .foregroundStyle(.secondary)
                 }
@@ -41,7 +41,7 @@ private struct PageIntro: View {
                 .font(.title2.weight(.semibold))
             Text(route.subtitle)
                 .foregroundStyle(.secondary)
-            Text("Viewing (partner.name)")
+            Text("Viewing \(partner.name)")
                 .font(.subheadline.weight(.medium))
                 .foregroundStyle(FinanceDesign.accent)
         }

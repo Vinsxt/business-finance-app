@@ -18,9 +18,9 @@ struct DownPaymentTransactionStepView: View {
 
                 DatePicker("Transaction date", selection: $draft.transactionDate, displayedComponents: .date)
 
-                TextField("Description", text: $draft.description, prompt: Text("e.g. DP Vellfire"))
+            TextField("Description", text: $draft.description, prompt: Text("e.g. Vellfire down payment"))
 
-                TextField("DP amount", value: $draft.receivedAmount, format: .number)
+                TextField("Down payment amount", value: $draft.receivedAmount, format: .number)
                     .keyboardType(.decimalPad)
             }
             .padding(FinanceDesign.cardPadding)

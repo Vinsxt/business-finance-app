@@ -12,6 +12,6 @@ struct StockVehicle: Identifiable, Hashable {
     let sellPrice: Double
 
     var displayName: String {
-        "(brand) (type) · (plateNumber)"
+        "\(brand) \(type) · \(plateNumber)"
     }
 }

@@ -26,14 +26,14 @@ struct DashboardView: View {
                     MetricCard(
                         title: "Stock value",
                         value: summary.stockValue.formatted(.currency(code: "IDR").precision(.fractionLength(0))),
-                        detail: "(summary.activeVehicles) active vehicles",
+                        detail: "\(summary.activeVehicles) active vehicles",
                         systemImage: "car.side",
                         tint: .blue
                     )
                     MetricCard(
                         title: "Pending funds",
                         value: summary.pendingFunds.formatted(.currency(code: "IDR").precision(.fractionLength(0))),
-                        detail: "(summary.pendingVehicles) vehicles awaiting payment",
+                        detail: "\(summary.pendingVehicles) vehicles awaiting payment",
                         systemImage: "clock",
                         tint: FinanceDesign.warning
                     )
@@ -66,7 +66,7 @@ private struct DashboardHeader: View {
         VStack(alignment: .leading, spacing: 8) {
             Text("Good morning")
                 .font(.largeTitle.weight(.bold))
-            Text("Here’s the latest position for (partner.name).")
+            Text("Here’s the latest position for \(partner.name).")
                 .foregroundStyle(.secondary)
         }
     }
@@ -85,10 +85,10 @@ private struct NewDownPaymentPrompt: View {
                     .background(FinanceDesign.accent, in: Circle())
 
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("Record a new DP")
+                    Text("Record a new down payment")
                         .font(.headline)
                         .foregroundStyle(.primary)
-                    Text("Move a vehicle through TRX, Dana Pending, Profit, Stock, and Limit Checker.")
+                    Text("Move a vehicle through TRX, Pending Funds, Monthly Profit, Stock, and Limit Checker.")
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                         .multilineTextAlignment(.leading)
