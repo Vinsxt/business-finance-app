@@ -9,6 +9,8 @@ struct RouteView: View {
         switch route {
         case .dashboard:
             DashboardView(selectedPartner: selectedPartner, onSelectRoute: onSelectRoute)
+        case .newDownPayment:
+            NewDownPaymentView(selectedPartner: selectedPartner)
         default:
             ModulePageView(route: route, selectedPartner: selectedPartner)
         }

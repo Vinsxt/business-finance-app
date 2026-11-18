@@ -11,6 +11,10 @@ struct DashboardView: View {
             VStack(alignment: .leading, spacing: 24) {
                 DashboardHeader(partner: selectedPartner)
 
+                NewDownPaymentPrompt {
+                    onSelectRoute(.newDownPayment)
+                }
+
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 170), spacing: 12)], spacing: 12) {
                     MetricCard(
                         title: "Available funds",
@@ -68,6 +72,40 @@ private struct DashboardHeader: View {
     }
 }
 
+private struct NewDownPaymentPrompt: View {
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            HStack(spacing: 14) {
+                Image(systemName: "arrow.down.circle.fill")
+                    .font(.title2)
+                    .foregroundStyle(.white)
+                    .frame(width: 44, height: 44)
+                    .background(FinanceDesign.accent, in: Circle())
+
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Record a new DP")
+                        .font(.headline)
+                        .foregroundStyle(.primary)
+                    Text("Move a vehicle through TRX, Dana Pending, Profit, Stock, and Limit Checker.")
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                        .multilineTextAlignment(.leading)
+                }
+
+                Spacer(minLength: 8)
+                Image(systemName: "chevron.right")
+                    .foregroundStyle(.secondary)
+            }
+            .padding(FinanceDesign.cardPadding)
+            .background(FinanceDesign.surface, in: .rect(cornerRadius: FinanceDesign.cornerRadius))
+        }
+        .buttonStyle(.plain)
+        .accessibilityHint("Opens the guided new down payment transaction workflow")
+    }
+}
+
 private struct ReconciliationCard: View {
     let difference: Double
     let action: () -> Void
@@ -103,14 +141,14 @@ private struct QuickActionsView: View {
             SectionHeading("Quick actions", subtitle: "Continue where the finance team works most often.")
             ViewThatFits(in: .horizontal) {
                 HStack(spacing: 12) {
+                    actionButton(.newDownPayment)
                     actionButton(.vehicleStock)
                     actionButton(.pendingFunds)
-                    actionButton(.transactions)
                 }
                 VStack(spacing: 12) {
+                    actionButton(.newDownPayment)
                     actionButton(.vehicleStock)
                     actionButton(.pendingFunds)
-                    actionButton(.transactions)
                 }
             }
         }
