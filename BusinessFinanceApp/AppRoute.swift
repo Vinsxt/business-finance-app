@@ -2,6 +2,7 @@ import SwiftUI
 
 enum AppRoute: String, CaseIterable, Identifiable, Hashable {
     case dashboard
+    case newDownPayment
     case partnerBooks
     case monthlyProfit
     case vehicleStock
@@ -19,6 +20,7 @@ enum AppRoute: String, CaseIterable, Identifiable, Hashable {
     var title: String {
         switch self {
         case .dashboard: "Dashboard"
+        case .newDownPayment: "New DP Transaction"
         case .partnerBooks: "Partner Books"
         case .monthlyProfit: "Monthly Profit"
         case .vehicleStock: "Vehicle Stock"
@@ -36,6 +38,7 @@ enum AppRoute: String, CaseIterable, Identifiable, Hashable {
     var subtitle: String {
         switch self {
         case .dashboard: "A quick view of today’s financial position."
+        case .newDownPayment: "Record a customer DP and prepare the sheet updates."
         case .partnerBooks: "Switch between partner financial books."
         case .monthlyProfit: "Recognized profit after full customer payment."
         case .vehicleStock: "Active vehicles and capital in stock."
@@ -53,6 +56,7 @@ enum AppRoute: String, CaseIterable, Identifiable, Hashable {
     var systemImage: String {
         switch self {
         case .dashboard: "rectangle.grid.2x2"
+        case .newDownPayment: "arrow.down.circle"
         case .partnerBooks: "books.vertical"
         case .monthlyProfit: "chart.line.uptrend.xyaxis"
         case .vehicleStock: "car.side"

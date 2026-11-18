@@ -29,3 +29,6 @@ fastlane/test_output
 # App-specific secrets and local configuration
 *.local
 *.secret
+
+# Local codebase graph output
+graphify-out/

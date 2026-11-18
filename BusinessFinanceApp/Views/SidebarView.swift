@@ -8,6 +8,7 @@ struct SidebarView: View {
         List(selection: $selection) {
             Section("Workspace") {
                 SidebarLink(route: .dashboard)
+                SidebarLink(route: .newDownPayment)
                 SidebarLink(route: .partnerBooks)
             }
 
