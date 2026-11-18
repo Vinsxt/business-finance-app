@@ -36,7 +36,7 @@ struct NewDownPaymentView: View {
             .padding(FinanceDesign.pagePadding)
         }
         .background(Color(uiColor: .systemBackground))
-        .navigationTitle("New DP Transaction")
+        .navigationTitle("New Down Payment Transaction")
         .toolbar {
             ToolbarItem(placement: .automatic) {
                 Label(selectedPartner.shortName, systemImage: "person.crop.rectangle")

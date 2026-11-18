@@ -15,7 +15,7 @@ struct DownPaymentStockStepView: View {
                 Text(vehicle.buyPrice.formatted(.currency(code: "IDR").precision(.fractionLength(0))))
                     .font(.title3.weight(.semibold))
                 Divider()
-                Label("The vehicle will be represented by its Dana Pending record.", systemImage: "arrow.right.circle")
+                Label("The vehicle will be represented by its Pending Funds record.", systemImage: "arrow.right.circle")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
             }

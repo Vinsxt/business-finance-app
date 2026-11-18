@@ -4,7 +4,7 @@ struct DownPaymentDraft {
     var transactionDate = Date.now
     var vehicleID = SampleData.stockVehicles[0].id
     var receivedAmount = 5_000_000.0
-    var description = "DP Vellfire"
+    var description = "Vellfire down payment"
     var costingAwaitingFullPayment = SampleData.limitChecker.costingAwaitingFullPayment
 
     func remainingBalance(for vehicle: StockVehicle) -> Double {
