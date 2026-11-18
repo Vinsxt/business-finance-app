@@ -32,3 +32,7 @@ fastlane/test_output
 
 # Local codebase graph output
 graphify-out/
+
+# Local agent skills installed for development
+.agents/
+skills-lock.json
